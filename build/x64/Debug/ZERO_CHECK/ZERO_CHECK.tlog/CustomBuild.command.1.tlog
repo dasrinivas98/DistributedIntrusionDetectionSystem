@@ -1,0 +1,10 @@
+^C:\USERS\DASRI\DESKTOP\DISTRIBUTEDINTRUSIONDETECTIONSYSTEM\BUILD\CMAKEFILES\A94028676902F2134A7C57E8ECCBF414\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dasri/Desktop/DistributedIntrusionDetectionSystem -BC:/Users/dasri/Desktop/DistributedIntrusionDetectionSystem/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/dasri/Desktop/DistributedIntrusionDetectionSystem/build/DistributedIntrusionDetectionSystem.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

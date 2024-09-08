@@ -1,0 +1,5 @@
+C:/Users/dasri/Desktop/DistributedIntrusionDetectionSystem/build/CMakeFiles/DistributedIntrusionDetectionSystem.dir
+C:/Users/dasri/Desktop/DistributedIntrusionDetectionSystem/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/dasri/Desktop/DistributedIntrusionDetectionSystem/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/dasri/Desktop/DistributedIntrusionDetectionSystem/build/tests/CMakeFiles/test_network.dir
+C:/Users/dasri/Desktop/DistributedIntrusionDetectionSystem/build/tests/CMakeFiles/test_detector.dir

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\dasri\Desktop\DistributedIntrusionDetectionSystem\build\CMakeFiles\a94028676902f2134a7c57e8eccbf414\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{58301DEE-BBEB-322D-AE9D-CFC9EAE10DD6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,11 +1,18 @@
 #include "detector.h"
 #include "network.h"
+#include "simulator.h"
+#include "utils.h"
 #include <iostream>
+#include <thread>
 
 int main() {
-    // Initialize network (e.g., start listening on a socket)
+    logMessage("Program Started"); 
+    // Initialize network
     Network net;
     net.start();
+
+    // Start traffic simulation in a separate thread
+    std::thread trafficThread(simulateTraffic, std::ref(net));
 
     // Initialize intrusion detector
     IntrusionDetector detector;
@@ -17,6 +24,9 @@ int main() {
             std::cout << "Intrusion detected! Data: " << data << std::endl;
         }
     }
+
+    // Join the traffic thread to ensure it runs alongside the main thread
+    trafficThread.join();
 
     return 0;
 }

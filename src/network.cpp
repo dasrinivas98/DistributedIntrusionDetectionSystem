@@ -1,5 +1,6 @@
 #include "network.h"
 #include <iostream>
+#include "utils.h"
 
 #ifdef _WIN32
     #include <winsock2.h>
@@ -10,12 +11,14 @@
 void Network::start() {
 #ifdef _WIN32
     // Initialize Winsock
+    logMessage("Initializing Winsock");
     if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
         std::cerr << "Failed to initialize Winsock.\n";
         return;
     }
 
     // Create socket
+    logMessage("Creating Socket");
     sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sock == INVALID_SOCKET) {
         std::cerr << "Socket creation failed.\n";
@@ -41,7 +44,7 @@ void Network::start() {
         WSACleanup();
         return;
     }
-
+    logMessage("Network started");
     std::cout << "Network started...\n";
 #else
     // Linux socket setup (not implemented here)
@@ -49,6 +52,7 @@ void Network::start() {
 }
 
 std::string Network::receiveData() {
+logMessage("network::receiveData() called");    
 #ifdef _WIN32
     char buffer[512];
     sockaddr_in client;
@@ -74,6 +78,7 @@ std::string Network::receiveData() {
 }
 
 void Network::sendData(const std::string& data) {
+    logMessage("network::sendData() called");    
 #ifdef _WIN32
     sockaddr_in client;
     client.sin_family = AF_INET;
